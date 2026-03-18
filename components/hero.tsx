@@ -1,91 +1,104 @@
+"use client"
+
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Sparkles } from "lucide-react"
+import { ArrowDown } from "lucide-react"
+import { useEffect, useState } from "react"
 
 export function Hero() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
+
   return (
-    <section className="relative min-h-screen flex items-center pt-16 lg:pt-20 overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-b from-secondary/30 to-background" />
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/hero-brow.jpg"
+          alt="Design de sobrancelhas profissional"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-foreground/40" />
+      </div>
 
-      <div className="container relative mx-auto px-4 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Content */}
-          <div className="order-2 lg:order-1 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent-foreground mb-6">
-              <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-sm font-sans font-light tracking-wide">Design de Sobrancelhas</span>
-            </div>
-
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-6 text-balance">
-              Jéssica
-            </h1>
-            
-            <p className="font-serif text-xl md:text-2xl lg:text-3xl text-muted-foreground font-light leading-relaxed mb-6 text-pretty">
-              Design de sobrancelhas com delicadeza, cuidado e atenção a cada detalhe.
-            </p>
-
-            <p className="font-sans text-base lg:text-lg text-muted-foreground font-light leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
-              Cada rosto é único, e é por isso que ofereço um atendimento totalmente personalizado. 
-              Meu objetivo é realçar a sua beleza natural e valorizar o seu olhar.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button
-                asChild
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-sans text-base px-8 py-6 group"
-              >
-                <a
-                  href="https://wa.me/5500000000000?text=Olá! Gostaria de agendar um horário."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Agendar pelo WhatsApp
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </a>
-              </Button>
-              
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-border hover:bg-secondary font-sans text-base px-8 py-6"
-              >
-                <a href="#portfolio">
-                  Ver meu trabalho
-                </a>
-              </Button>
-            </div>
-          </div>
-
-          {/* Image */}
-          <div className="order-1 lg:order-2 relative">
-            <div className="relative aspect-[4/5] max-w-md mx-auto lg:max-w-none">
-              {/* Decorative frame */}
-              <div className="absolute -inset-4 border border-accent/30 rounded-2xl" />
-              <div className="absolute -inset-8 border border-primary/10 rounded-3xl hidden lg:block" />
-              
-              <div className="relative h-full rounded-xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/hero-brow.jpg"
-                  alt="Design de sobrancelhas profissional"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-
-              {/* Floating badge */}
-              <div className="absolute -bottom-4 -left-4 lg:-left-8 bg-card rounded-xl p-4 shadow-lg border border-border">
-                <p className="font-serif text-lg font-medium text-foreground">Beleza natural</p>
-                <p className="font-sans text-sm text-muted-foreground">em destaque</p>
-              </div>
-            </div>
-          </div>
+      {/* Content */}
+      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+        <div 
+          className={`transition-all duration-1000 delay-300 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          <p className="font-sans text-xs md:text-sm tracking-[0.3em] uppercase text-background/80 mb-6">
+            Design de Sobrancelhas
+          </p>
         </div>
+
+        <h1 
+          className={`font-serif text-6xl md:text-8xl lg:text-9xl font-light text-background mb-8 transition-all duration-1000 delay-500 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          Jéssica
+        </h1>
+        
+        <p 
+          className={`font-sans text-lg md:text-xl text-background/90 font-light max-w-2xl mx-auto mb-12 leading-relaxed transition-all duration-1000 delay-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          Realço a beleza natural do seu olhar com delicadeza, cuidado e atenção a cada detalhe.
+        </p>
+
+        <div 
+          className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-900 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          <Button
+            asChild
+            size="lg"
+            className="bg-background hover:bg-background/90 text-foreground font-sans text-xs tracking-widest uppercase px-10 py-6"
+          >
+            <a
+              href="https://wa.me/5500000000000?text=Olá! Gostaria de agendar um horário."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Agendar agora
+            </a>
+          </Button>
+          
+          <Button
+            asChild
+            variant="outline"
+            size="lg"
+            className="border-background/50 bg-transparent hover:bg-background/10 text-background font-sans text-xs tracking-widest uppercase px-10 py-6"
+          >
+            <a href="#portfolio">
+              Ver trabalhos
+            </a>
+          </Button>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div 
+        className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-all duration-1000 delay-1000 ${
+          isVisible ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <a 
+          href="#sobre" 
+          className="flex flex-col items-center gap-2 text-background/60 hover:text-background transition-colors"
+        >
+          <span className="font-sans text-xs tracking-widest uppercase">Scroll</span>
+          <ArrowDown className="w-4 h-4 animate-bounce" />
+        </a>
       </div>
     </section>
   )

@@ -1,44 +1,69 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Clock } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
+import { useEffect, useRef, useState } from "react"
 
 const services = [
   {
+    number: "01",
     name: "Design de Sobrancelhas",
-    description: "Técnica clássica para definir e harmonizar suas sobrancelhas com o formato do seu rosto.",
-    benefit: "Resultado natural e duradouro",
-    available: true,
+    description: "Técnica clássica para definir e harmonizar suas sobrancelhas com o formato do seu rosto. Resultado natural e duradouro.",
   },
   {
+    number: "02",
     name: "Design com Henna",
-    description: "Além do design, aplicação de henna para preencher falhas e intensificar a cor dos fios.",
-    benefit: "Efeito preenchido por até 15 dias",
-    available: true,
+    description: "Além do design, aplicação de henna para preencher falhas e intensificar a cor dos fios. Efeito preenchido por até 15 dias.",
   },
   {
+    number: "03",
     name: "Brow Lamination",
-    description: "Técnica que alinha e fixa os fios, criando um efeito de sobrancelhas mais volumosas e definidas.",
-    benefit: "Sobrancelhas alinhadas por semanas",
-    available: true,
+    description: "Técnica que alinha e fixa os fios, criando um efeito de sobrancelhas mais volumosas e definidas por semanas.",
   },
   {
+    number: "04",
     name: "Limpeza e Alinhamento",
     description: "Remoção dos pelos em excesso e alinhamento suave para manter suas sobrancelhas sempre bonitas.",
-    benefit: "Manutenção prática e rápida",
-    available: true,
   },
 ]
 
 export function Services() {
+  const sectionRef = useRef<HTMLElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <section id="servicos" className="py-20 lg:py-32 bg-secondary/30 relative overflow-hidden">
-      <div className="absolute top-1/2 left-0 w-72 h-72 bg-accent/10 rounded-full blur-3xl -translate-y-1/2" />
-      
-      <div className="container relative mx-auto px-4 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="font-sans text-sm uppercase tracking-widest text-primary mb-4 block">
+    <section 
+      ref={sectionRef}
+      id="servicos" 
+      className="py-24 lg:py-40 bg-secondary/50"
+    >
+      <div className="container mx-auto px-6 lg:px-12">
+        <div 
+          className={`max-w-2xl mb-20 transition-all duration-1000 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          <span className="font-sans text-xs tracking-[0.3em] uppercase text-primary mb-6 block">
             Serviços
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light mb-6 leading-tight">
             O que eu ofereço
           </h2>
           <p className="font-sans text-lg text-muted-foreground font-light">
@@ -46,55 +71,54 @@ export function Services() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
+        <div className="space-y-0">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-card rounded-2xl p-8 border border-border hover:border-primary/30 hover:shadow-xl transition-all duration-300 relative overflow-hidden"
+              className={`group border-t border-border last:border-b py-8 lg:py-12 transition-all duration-700 ${
+                isVisible 
+                  ? "opacity-100 translate-y-0" 
+                  : "opacity-0 translate-y-8"
+              }`}
+              style={{ transitionDelay: `${index * 150}ms` }}
             >
-              {!service.available && (
-                <div className="absolute top-4 right-4 flex items-center gap-1 text-xs font-sans text-muted-foreground bg-muted px-3 py-1 rounded-full">
-                  <Clock className="w-3 h-3" />
-                  Em breve
+              <div className="grid grid-cols-12 gap-4 items-start lg:items-center">
+                <div className="col-span-2 lg:col-span-1">
+                  <span className="font-sans text-sm text-muted-foreground">
+                    {service.number}
+                  </span>
                 </div>
-              )}
-              
-              <h3 className="font-serif text-2xl font-semibold mb-3 text-foreground">
-                {service.name}
-              </h3>
-              
-              <p className="font-sans text-muted-foreground font-light leading-relaxed mb-4">
-                {service.description}
-              </p>
-
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/20 text-accent-foreground text-sm font-sans mb-6">
-                {service.benefit}
-              </div>
-
-              {service.available ? (
-                <Button
-                  asChild
-                  variant="outline"
-                  className="w-full border-primary/30 hover:bg-primary hover:text-primary-foreground font-sans group/btn"
-                >
-                  <a
-                    href={`https://wa.me/5500000000000?text=Olá! Tenho interesse no serviço de ${service.name}.`}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                
+                <div className="col-span-10 lg:col-span-4">
+                  <h3 className="font-serif text-2xl lg:text-3xl font-light text-foreground group-hover:text-primary transition-colors duration-300">
+                    {service.name}
+                  </h3>
+                </div>
+                
+                <div className="col-span-10 col-start-3 lg:col-span-5 lg:col-start-6 mt-2 lg:mt-0">
+                  <p className="font-sans text-muted-foreground font-light leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+                
+                <div className="col-span-2 lg:col-span-2 flex justify-end mt-2 lg:mt-0">
+                  <Button
+                    asChild
+                    variant="ghost"
+                    size="icon"
+                    className="rounded-full border border-border group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
                   >
-                    Quero agendar
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                  </a>
-                </Button>
-              ) : (
-                <Button
-                  variant="outline"
-                  disabled
-                  className="w-full font-sans opacity-50"
-                >
-                  Em breve disponível
-                </Button>
-              )}
+                    <a
+                      href={`https://wa.me/5500000000000?text=Olá! Tenho interesse no serviço de ${service.name}.`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Agendar ${service.name}`}
+                    >
+                      <ArrowUpRight className="w-4 h-4" />
+                    </a>
+                  </Button>
+                </div>
+              </div>
             </div>
           ))}
         </div>

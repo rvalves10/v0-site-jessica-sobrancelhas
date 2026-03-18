@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button"
 
 const navLinks = [
   { href: "#sobre", label: "Sobre" },
-  { href: "#diferenciais", label: "Diferenciais" },
   { href: "#servicos", label: "Serviços" },
   { href: "#portfolio", label: "Portfólio" },
   { href: "#depoimentos", label: "Depoimentos" },
@@ -27,23 +26,28 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-md shadow-sm" : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled 
+          ? "bg-background/90 backdrop-blur-lg shadow-sm py-3" 
+          : "bg-transparent py-5"
       }`}
     >
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          <a href="#" className="font-serif text-2xl lg:text-3xl font-semibold tracking-wide text-foreground">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="flex items-center justify-between">
+          <a 
+            href="#" 
+            className="font-serif text-2xl lg:text-3xl font-medium tracking-wide text-foreground"
+          >
             Jéssica
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-sans font-light tracking-wide text-muted-foreground hover:text-primary transition-colors duration-200"
+                className="text-sm font-sans font-normal tracking-wider text-muted-foreground hover:text-foreground transition-colors duration-300 uppercase"
               >
                 {link.label}
               </a>
@@ -53,7 +57,8 @@ export function Header() {
           <div className="hidden lg:block">
             <Button
               asChild
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-sans text-sm tracking-wide"
+              size="lg"
+              className="bg-foreground hover:bg-foreground/90 text-background font-sans text-xs tracking-widest uppercase px-8"
             >
               <a
                 href="https://wa.me/5500000000000?text=Olá! Gostaria de agendar um horário."
@@ -76,36 +81,38 @@ export function Header() {
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-md border-b border-border">
-            <nav className="flex flex-col py-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="px-4 py-3 text-base font-sans text-muted-foreground hover:text-primary hover:bg-muted/50 transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.label}
-                </a>
-              ))}
-              <div className="px-4 pt-4">
-                <Button
-                  asChild
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-sans"
-                >
-                  <a
-                    href="https://wa.me/5500000000000?text=Olá! Gostaria de agendar um horário."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Agendar pelo WhatsApp
-                  </a>
-                </Button>
-              </div>
-            </nav>
-          </div>
-        )}
+        <div 
+          className={`lg:hidden fixed inset-0 top-[72px] bg-background/98 backdrop-blur-lg transition-all duration-500 ${
+            isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
+        >
+          <nav className="flex flex-col items-center justify-center h-full gap-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-2xl font-serif text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </a>
+            ))}
+            <Button
+              asChild
+              size="lg"
+              className="mt-4 bg-foreground hover:bg-foreground/90 text-background font-sans text-xs tracking-widest uppercase px-10"
+            >
+              <a
+                href="https://wa.me/5500000000000?text=Olá! Gostaria de agendar um horário."
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+              >
+                Agendar pelo WhatsApp
+              </a>
+            </Button>
+          </nav>
+        </div>
       </div>
     </header>
   )
