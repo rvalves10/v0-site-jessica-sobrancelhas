@@ -8,16 +8,16 @@ export function Footer() {
         <div className="max-w-4xl mx-auto text-center">
           {/* CTA Section */}
           <span className="font-sans text-[10px] tracking-[0.4em] uppercase text-primary mb-8 block">
-            Pronta para transformar seu olhar?
+            Bora transformar seu olhar?
           </span>
           
           <h2 className="font-serif text-4xl md:text-5xl lg:text-7xl font-light mb-10 leading-[1.1]">
-            Vamos conversar
+            Vem conversar comigo
           </h2>
           
           <p className="font-sans text-lg text-muted-foreground font-light mb-12 max-w-xl mx-auto leading-relaxed">
-            Me chama no WhatsApp para tirar suas dúvidas ou agendar seu horário. 
-            Vai ser um prazer te atender!
+            Me chama no WhatsApp pra tirar suas dúvidas ou marcar seu horário. 
+            Vai ser um prazer cuidar de você!
           </p>
 
           <Button
@@ -26,11 +26,11 @@ export function Footer() {
             className="bg-foreground hover:bg-foreground/90 text-background font-sans text-xs tracking-[0.2em] uppercase px-14 py-7 rounded-none mb-24"
           >
             <a
-              href="https://wa.me/5500000000000?text=Olá, Jéssica! Gostaria de saber mais sobre seus serviços."
+              href="https://wa.me/5500000000000?text=Oi, Jéssica! Vim pelo site e quero saber mais sobre seus serviços!"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Chamar no WhatsApp
+              Chamar no Zap
             </a>
           </Button>
 
@@ -69,7 +69,7 @@ export function Footer() {
 
           {/* Copyright */}
           <p className="font-sans text-xs text-muted-foreground tracking-wider">
-            © {new Date().getFullYear()} Jéssica Lash Designer. Todos os direitos reservados.
+            © {new Date().getFullYear()} Jéssica Lash Designer. Feito com carinho.
           </p>
         </div>
       </div>

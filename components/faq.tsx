@@ -10,28 +10,28 @@ import {
 
 const faqs = [
   {
-    question: "Quanto tempo dura a extensão de cílios?",
-    answer: "A extensão de cílios dura em média de 3 a 4 semanas. Recomendo a manutenção a cada 2-3 semanas para manter o olhar sempre bonito.",
+    question: "Quanto tempo dura a extensão?",
+    answer: "Dura de 3 a 4 semanas, minha linda! Recomendo manutenção a cada 2-3 semanas pra ficar sempre impecável.",
   },
   {
-    question: "A extensão danifica os cílios naturais?",
-    answer: "Não! Quando aplicada corretamente com produtos de qualidade, a extensão não danifica seus cílios naturais. Uso técnicas que respeitam o ciclo de crescimento de cada fio.",
+    question: "Estraga os cílios naturais?",
+    answer: "Que nada! Quando feito direitinho e com produtos de qualidade, não prejudica em nada seus cílios naturais. Fica tranquila!",
   },
   {
-    question: "Quanto tempo dura a aplicação?",
-    answer: "A primeira aplicação leva de 1h30 a 2h30, dependendo do estilo escolhido. Manutenções levam cerca de 1h a 1h30.",
+    question: "Quanto tempo demora a aplicação?",
+    answer: "A primeira aplicação leva de 1h30 a 2h30, depende do estilo. Manutenções são mais rápidas, de 1h a 1h30. Tempo pra você relaxar!",
   },
   {
     question: "Posso molhar os cílios?",
-    answer: "Sim! Após 24 horas da aplicação, você pode molhar normalmente. Evite apenas jatos de água muito fortes e produtos oleosos na região dos olhos.",
+    answer: "Pode sim! Só espera 24 horinhas depois de aplicar. Depois disso, pode lavar o rosto normal. Só evita jatos de água muito fortes e produtos com óleo nos olhos.",
   },
   {
     question: "Qual a diferença entre Clássica e Volume?",
-    answer: "Na técnica Clássica, aplico um fio em cada cílio natural, ideal para quem quer um resultado mais discreto. No Volume, crio leques de fios ultrafinos para um efeito mais preenchido e glamouroso.",
+    answer: "Na Clássica coloco um fio em cada cílio seu, fica mais natural e discreto. No Volume, faço leques de fios finininhos pra um resultado mais cheio e glamouroso. Os dois ficam lindos!",
   },
   {
-    question: "É a primeira vez que você faz cílios?",
-    answer: "Sim! Estou iniciando minha carreira, mas isso significa que vou dar 200% de atenção e dedicação ao seu atendimento. Minha prioridade é que você saia satisfeita e se sinta linda!",
+    question: "Você tá começando agora, né?",
+    answer: "Isso mesmo! Tô no início da minha jornada, mas isso significa que vou dar 200% de atenção e carinho no seu atendimento. Minha prioridade é você sair daqui se sentindo maravilhosa!",
   },
 ]
 
@@ -73,10 +73,10 @@ export function FAQ() {
               Dúvidas
             </span>
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light mb-8 leading-[1.1]">
-              Perguntas frequentes
+              Perguntas que sempre me fazem
             </h2>
             <p className="font-sans text-muted-foreground font-light leading-relaxed">
-              Tire suas principais dúvidas. Se não encontrar o que procura, é só me chamar no WhatsApp que respondo com carinho!
+              Se não encontrar sua dúvida aqui, me chama no WhatsApp que eu respondo com todo carinho!
             </p>
           </div>
 

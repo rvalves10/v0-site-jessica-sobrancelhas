@@ -7,26 +7,26 @@ import { useEffect, useRef, useState } from "react"
 const services = [
   {
     number: "01",
-    name: "Extensão Clássica",
-    description: "Um fio de extensão em cada cílio natural. Resultado elegante e discreto, perfeito para o dia a dia.",
+    name: "Clássica Fio a Fio",
+    description: "Um fio em cada cílio natural. Fica lindo e natural, perfeito pro dia a dia. Você vai amar!",
     highlight: "Natural",
   },
   {
     number: "02",
     name: "Volume Brasileiro",
-    description: "Leques de fios ultrafinos para um olhar volumoso e marcante. Efeito glamouroso e sofisticado.",
+    description: "Leques de fios finininhos pra deixar o olhar bem volumoso e marcante. Sucesso garantido!",
     highlight: "Volumoso",
   },
   {
     number: "03",
     name: "Volume Híbrido",
-    description: "Mix de fios clássicos e volume, criando textura e definição. O melhor dos dois mundos.",
+    description: "Mix de clássica com volume pra quem quer o melhor dos dois mundos. Fica maravilhoso!",
     highlight: "Versátil",
   },
   {
     number: "04",
     name: "Lash Lifting",
-    description: "Curvatura e tintura dos cílios naturais, sem extensões. Duração de até 8 semanas.",
+    description: "Curvatura e tintura dos seus próprios cílios. Praticidade pra quem não quer extensão. Dura até 8 semanas!",
     highlight: "Prático",
   },
 ]
@@ -70,11 +70,11 @@ export function Services() {
               Serviços
             </span>
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light leading-[1.1]">
-              O que eu ofereço
+              O que eu faço por você
             </h2>
           </div>
           <p className="font-sans text-muted-foreground font-light max-w-md lg:text-right">
-            Técnicas modernas e produtos de alta qualidade para transformar o seu olhar.
+            Técnicas modernas e produtos de primeira pra deixar seu olhar impecável!
           </p>
         </div>
 
@@ -133,7 +133,7 @@ export function Services() {
                     }`}
                   >
                     <a
-                      href={`https://wa.me/5500000000000?text=Olá! Tenho interesse no serviço de ${service.name}.`}
+                      href={`https://wa.me/5500000000000?text=Oi, Jéssica! Quero saber mais sobre ${service.name}!`}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Agendar ${service.name}`}

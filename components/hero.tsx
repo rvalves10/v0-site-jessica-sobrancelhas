@@ -36,7 +36,7 @@ export function Hero() {
         >
           <Sparkles className="w-4 h-4 text-accent" />
           <span className="font-sans text-xs tracking-widest uppercase text-background/90">
-            Agora atendendo
+            Agendando agora
           </span>
         </div>
 
@@ -63,7 +63,7 @@ export function Hero() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          Realço a beleza do seu olhar com cílios feitos sob medida, fio a fio.
+          Vem deixar esse olhar ainda mais lindo, minha linda. Aqui você é tratada com todo carinho!
         </p>
 
         <div 
@@ -77,11 +77,11 @@ export function Hero() {
             className="bg-background hover:bg-background/90 text-foreground font-sans text-xs tracking-[0.2em] uppercase px-12 py-7 rounded-none"
           >
             <a
-              href="https://wa.me/5500000000000?text=Olá! Gostaria de agendar um horário."
+              href="https://wa.me/5500000000000?text=Oi, Jéssica! Quero agendar um horário!"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Quero agendar
+              Agendar agora
             </a>
           </Button>
           
@@ -92,7 +92,7 @@ export function Hero() {
             className="border-background/30 bg-transparent hover:bg-background/10 text-background font-sans text-xs tracking-[0.2em] uppercase px-12 py-7 rounded-none"
           >
             <a href="#servicos">
-              Conhecer serviços
+              Ver serviços
             </a>
           </Button>
         </div>
@@ -108,7 +108,7 @@ export function Hero() {
           href="#sobre" 
           className="flex flex-col items-center gap-3 text-background/50 hover:text-background transition-colors"
         >
-          <span className="font-sans text-[10px] tracking-[0.3em] uppercase">Conheça</span>
+          <span className="font-sans text-[10px] tracking-[0.3em] uppercase">Me conhece</span>
           <ArrowDown className="w-4 h-4 animate-bounce" />
         </a>
       </div>

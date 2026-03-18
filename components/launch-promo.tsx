@@ -43,7 +43,7 @@ export function LaunchPromo() {
           >
             <Sparkles className="w-4 h-4 text-accent" />
             <span className="font-sans text-xs tracking-widest uppercase text-background/90">
-              Oferta especial de lançamento
+              Promoção de Lançamento
             </span>
           </div>
 
@@ -52,9 +52,9 @@ export function LaunchPromo() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            Seja uma das minhas
+            Bora ser uma das
             <br />
-            <span className="text-accent">primeiras clientes</span>
+            <span className="text-accent">primeiras clientes?</span>
           </h2>
 
           <p 
@@ -62,8 +62,8 @@ export function LaunchPromo() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            Estou começando minha jornada e quero que você faça parte dela. 
-            Por tempo limitado, minhas primeiras clientes terão condições especiais.
+            Tô começando essa jornada e quero que você faça parte dela! 
+            Minhas primeiras clientes vão ter condições especiais, viu? Aproveita!
           </p>
 
           <div 
@@ -77,7 +77,7 @@ export function LaunchPromo() {
               </div>
               <div className="text-left">
                 <p className="font-serif text-xl text-background">Preço especial</p>
-                <p className="font-sans text-sm text-background/60">Para as primeiras clientes</p>
+                <p className="font-sans text-sm text-background/60">Só pras primeiras clientes</p>
               </div>
             </div>
             
@@ -87,7 +87,7 @@ export function LaunchPromo() {
               </div>
               <div className="text-left">
                 <p className="font-serif text-xl text-background">Horários flexíveis</p>
-                <p className="font-sans text-sm text-background/60">Agenda personalizada</p>
+                <p className="font-sans text-sm text-background/60">A gente combina direitinho</p>
               </div>
             </div>
           </div>
@@ -100,7 +100,7 @@ export function LaunchPromo() {
             }`}
           >
             <a
-              href="https://wa.me/5500000000000?text=Olá! Vi a promoção de lançamento e quero saber mais!"
+              href="https://wa.me/5500000000000?text=Oi, Jéssica! Vi a promoção de lançamento e quero aproveitar!"
               target="_blank"
               rel="noopener noreferrer"
             >

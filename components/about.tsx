@@ -2,23 +2,23 @@
 
 import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
-import { Heart, Sparkles, Award } from "lucide-react"
+import { Heart, Sparkles, Sun } from "lucide-react"
 
 const highlights = [
   {
     icon: Sparkles,
-    title: "Técnicas Atuais",
-    description: "Formação recente com as técnicas mais modernas do mercado"
+    title: "Técnicas Novas",
+    description: "Formação fresquinha com tudo que há de mais moderno"
   },
   {
     icon: Heart,
-    title: "Atendimento Único",
-    description: "Cada cliente recebe atenção exclusiva e personalizada"
+    title: "Com Carinho",
+    description: "Atendimento de verdade, como se fosse da família"
   },
   {
-    icon: Award,
-    title: "Compromisso",
-    description: "100% dedicada a entregar o melhor resultado para você"
+    icon: Sun,
+    title: "Energia Boa",
+    description: "Ambiente acolhedor pra você relaxar e se sentir em casa"
   }
 ]
 
@@ -77,26 +77,27 @@ export function About() {
             }`}
           >
             <span className="font-sans text-[10px] tracking-[0.4em] uppercase text-primary mb-8 block">
-              Prazer em conhecer
+              Prazer te conhecer
             </span>
             
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light mb-10 text-balance leading-[1.1]">
-              Eu sou a Jéssica
+              Oi, eu sou a Jéssica!
             </h2>
 
             <div className="space-y-6 font-sans text-base lg:text-lg text-muted-foreground font-light leading-relaxed mb-12">
               <p>
-                Apaixonada pela arte de transformar olhares, encontrei na extensão de cílios 
-                uma forma de revelar a beleza única de cada mulher.
+                Sou nordestina com muito orgulho e encontrei na extensão de cílios uma forma 
+                de fazer o que mais amo: cuidar das pessoas e deixar cada mulher se sentindo 
+                ainda mais linda!
               </p>
               <p>
-                Estou iniciando minha jornada profissional com toda a energia, dedicação e 
-                vontade de fazer diferente. Para mim, não existe cliente número, existe 
-                <span className="text-foreground font-normal"> você</span> — e cada detalhe importa.
+                Tô começando minha jornada agora, mas pode confiar que vou colocar toda minha 
+                dedicação e carinho em cada fio. Aqui você não é só mais uma cliente, 
+                <span className="text-foreground font-normal"> você é especial</span>.
               </p>
               <p>
-                Meu compromisso é simples: entregar um trabalho que te faça se sentir ainda 
-                mais linda, com cílios que valorizam seu olhar de forma natural e elegante.
+                Meu cantinho é preparado com todo cuidado pra você se sentir acolhida, relaxar 
+                e sair daqui maravilhosa. Vem tomar um cafézinho comigo!
               </p>
             </div>
 
