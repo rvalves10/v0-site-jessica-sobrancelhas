@@ -2,8 +2,8 @@ import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
 import { Services } from "@/components/services"
+import { LaunchPromo } from "@/components/launch-promo"
 import { Portfolio } from "@/components/portfolio"
-import { Testimonials } from "@/components/testimonials"
 import { FAQ } from "@/components/faq"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
@@ -15,8 +15,8 @@ export default function Home() {
       <Hero />
       <About />
       <Services />
+      <LaunchPromo />
       <Portfolio />
-      <Testimonials />
       <FAQ />
       <Footer />
       <WhatsAppButton />

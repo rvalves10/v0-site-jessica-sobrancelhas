@@ -8,28 +8,33 @@ const services = [
   {
     number: "01",
     name: "Extensão Clássica",
-    description: "Um fio de extensão aplicado em cada cílio natural. Resultado elegante e natural, perfeito para o dia a dia.",
+    description: "Um fio de extensão em cada cílio natural. Resultado elegante e discreto, perfeito para o dia a dia.",
+    highlight: "Natural",
   },
   {
     number: "02",
     name: "Volume Brasileiro",
-    description: "Técnica que cria leques de fios ultrafinos para um olhar mais volumoso e marcante. Efeito glamouroso e sofisticado.",
+    description: "Leques de fios ultrafinos para um olhar volumoso e marcante. Efeito glamouroso e sofisticado.",
+    highlight: "Volumoso",
   },
   {
     number: "03",
     name: "Volume Híbrido",
-    description: "Combinação de fios clássicos e volume, criando textura e definição. O melhor dos dois mundos para um olhar único.",
+    description: "Mix de fios clássicos e volume, criando textura e definição. O melhor dos dois mundos.",
+    highlight: "Versátil",
   },
   {
     number: "04",
     name: "Lash Lifting",
-    description: "Curvatura e tintura dos cílios naturais, realçando o olhar sem extensões. Duração de até 8 semanas.",
+    description: "Curvatura e tintura dos cílios naturais, sem extensões. Duração de até 8 semanas.",
+    highlight: "Prático",
   },
 ]
 
 export function Services() {
   const sectionRef = useRef<HTMLElement>(null)
   const [isVisible, setIsVisible] = useState(false)
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -52,22 +57,24 @@ export function Services() {
     <section 
       ref={sectionRef}
       id="servicos" 
-      className="py-24 lg:py-40 bg-secondary/50"
+      className="py-28 lg:py-44 bg-secondary/30"
     >
       <div className="container mx-auto px-6 lg:px-12">
         <div 
-          className={`max-w-2xl mb-20 transition-all duration-1000 ${
+          className={`flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-20 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <span className="font-sans text-xs tracking-[0.3em] uppercase text-primary mb-6 block">
-            Serviços
-          </span>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light mb-6 leading-tight">
-            O que eu ofereço
-          </h2>
-          <p className="font-sans text-lg text-muted-foreground font-light">
-            Técnicas especializadas para transformar o seu olhar, com produtos premium e aplicação delicada.
+          <div className="max-w-2xl">
+            <span className="font-sans text-[10px] tracking-[0.4em] uppercase text-primary mb-6 block">
+              Serviços
+            </span>
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light leading-[1.1]">
+              O que eu ofereço
+            </h2>
+          </div>
+          <p className="font-sans text-muted-foreground font-light max-w-md lg:text-right">
+            Técnicas modernas e produtos de alta qualidade para transformar o seu olhar.
           </p>
         </div>
 
@@ -75,38 +82,55 @@ export function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`group border-t border-border last:border-b py-8 lg:py-12 transition-all duration-700 ${
+              className={`group border-t border-border/60 last:border-b py-10 lg:py-14 transition-all duration-700 cursor-pointer ${
                 isVisible 
                   ? "opacity-100 translate-y-0" 
                   : "opacity-0 translate-y-8"
-              }`}
-              style={{ transitionDelay: `${index * 150}ms` }}
+              } ${hoveredIndex === index ? "bg-background" : ""}`}
+              style={{ transitionDelay: `${index * 100}ms` }}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
             >
-              <div className="grid grid-cols-12 gap-4 items-start lg:items-center">
+              <div className="grid grid-cols-12 gap-4 items-center">
                 <div className="col-span-2 lg:col-span-1">
-                  <span className="font-sans text-sm text-muted-foreground">
+                  <span className={`font-sans text-xs transition-colors duration-300 ${
+                    hoveredIndex === index ? "text-primary" : "text-muted-foreground"
+                  }`}>
                     {service.number}
                   </span>
                 </div>
                 
-                <div className="col-span-10 lg:col-span-4">
-                  <h3 className="font-serif text-2xl lg:text-3xl font-light text-foreground group-hover:text-primary transition-colors duration-300">
+                <div className="col-span-10 lg:col-span-4 flex items-center gap-4">
+                  <h3 className={`font-serif text-2xl lg:text-4xl font-light transition-colors duration-300 ${
+                    hoveredIndex === index ? "text-primary" : "text-foreground"
+                  }`}>
                     {service.name}
                   </h3>
+                  <span className={`hidden lg:inline-block font-sans text-[10px] tracking-widest uppercase px-3 py-1 border rounded-full transition-all duration-300 ${
+                    hoveredIndex === index 
+                      ? "border-primary text-primary" 
+                      : "border-border text-muted-foreground"
+                  }`}>
+                    {service.highlight}
+                  </span>
                 </div>
                 
-                <div className="col-span-10 col-start-3 lg:col-span-5 lg:col-start-6 mt-2 lg:mt-0">
-                  <p className="font-sans text-muted-foreground font-light leading-relaxed">
+                <div className="col-span-10 col-start-3 lg:col-span-5 lg:col-start-6 mt-3 lg:mt-0">
+                  <p className="font-sans text-muted-foreground font-light leading-relaxed text-sm lg:text-base">
                     {service.description}
                   </p>
                 </div>
                 
-                <div className="col-span-2 lg:col-span-2 flex justify-end mt-2 lg:mt-0">
+                <div className="col-span-2 flex justify-end">
                   <Button
                     asChild
                     variant="ghost"
                     size="icon"
-                    className="rounded-full border border-border group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
+                    className={`rounded-full border transition-all duration-300 ${
+                      hoveredIndex === index 
+                        ? "border-primary bg-primary text-primary-foreground scale-110" 
+                        : "border-border"
+                    }`}
                   >
                     <a
                       href={`https://wa.me/5500000000000?text=Olá! Tenho interesse no serviço de ${service.name}.`}

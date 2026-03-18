@@ -2,7 +2,8 @@
 
 import Image from "next/image"
 import { useState, useEffect, useRef } from "react"
-import { Instagram } from "lucide-react"
+import { Instagram, Camera } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const portfolioItems = [
   {
@@ -53,33 +54,35 @@ export function Portfolio() {
     <section 
       ref={sectionRef}
       id="portfolio" 
-      className="py-24 lg:py-40 bg-background"
+      className="py-28 lg:py-44 bg-background"
     >
       <div className="container mx-auto px-6 lg:px-12">
         <div 
-          className={`text-center max-w-2xl mx-auto mb-20 transition-all duration-1000 ${
+          className={`flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-20 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <span className="font-sans text-xs tracking-[0.3em] uppercase text-primary mb-6 block">
-            Portfólio
-          </span>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light mb-6">
-            Resultados reais
-          </h2>
-          <p className="font-sans text-lg text-muted-foreground font-light">
-            Cada fio importa. Veja alguns dos meus trabalhos.
+          <div className="max-w-2xl">
+            <span className="font-sans text-[10px] tracking-[0.4em] uppercase text-primary mb-6 block">
+              Portfólio
+            </span>
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light leading-[1.1]">
+              Meus trabalhos
+            </h2>
+          </div>
+          <p className="font-sans text-muted-foreground font-light max-w-md lg:text-right">
+            Cada resultado reflete minha dedicação em valorizar a beleza única de cada olhar.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 lg:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
           {portfolioItems.map((item, index) => (
             <div
               key={item.id}
-              className={`group relative aspect-[4/5] overflow-hidden cursor-pointer transition-all duration-700 ${
+              className={`group relative aspect-[3/4] overflow-hidden cursor-pointer transition-all duration-700 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
-              style={{ transitionDelay: `${index * 150}ms` }}
+              style={{ transitionDelay: `${index * 100}ms` }}
               onMouseEnter={() => setHoveredId(item.id)}
               onMouseLeave={() => setHoveredId(null)}
             >
@@ -88,17 +91,18 @@ export function Portfolio() {
                 alt={item.title}
                 fill
                 className={`object-cover transition-all duration-700 ${
-                  hoveredId === item.id ? "scale-105" : "scale-100"
+                  hoveredId === item.id ? "scale-110" : "scale-100"
                 }`}
               />
               
               {/* Overlay */}
               <div
-                className={`absolute inset-0 bg-foreground/60 transition-opacity duration-500 flex items-end p-6 lg:p-10 ${
+                className={`absolute inset-0 bg-foreground/70 transition-opacity duration-500 flex flex-col items-center justify-center p-6 ${
                   hoveredId === item.id ? "opacity-100" : "opacity-0"
                 }`}
               >
-                <h3 className="font-serif text-xl lg:text-2xl text-background">
+                <Camera className="w-6 h-6 text-background/60 mb-3" />
+                <h3 className="font-serif text-lg lg:text-xl text-background text-center">
                   {item.title}
                 </h3>
               </div>
@@ -106,21 +110,31 @@ export function Portfolio() {
           ))}
         </div>
 
+        {/* Instagram CTA */}
         <div 
-          className={`mt-16 text-center transition-all duration-1000 delay-500 ${
+          className={`mt-20 text-center transition-all duration-1000 delay-500 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 font-sans text-sm tracking-widest uppercase text-foreground hover:text-primary transition-colors group"
+          <p className="font-sans text-sm text-muted-foreground mb-6">
+            Acompanhe meus trabalhos e novidades
+          </p>
+          <Button
+            asChild
+            variant="outline"
+            size="lg"
+            className="font-sans text-xs tracking-[0.2em] uppercase px-10 py-6 rounded-none border-foreground/20 hover:bg-foreground hover:text-background"
           >
-            <Instagram className="w-5 h-5" />
-            <span>Siga no Instagram para ver mais</span>
-            <span className="text-primary">@jessica.lashes</span>
-          </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3"
+            >
+              <Instagram className="w-4 h-4" />
+              <span>@jessica.lashes</span>
+            </a>
+          </Button>
         </div>
       </div>
     </section>
