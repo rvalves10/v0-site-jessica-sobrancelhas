@@ -41,7 +41,7 @@ export function About() {
             <div className="relative aspect-[3/4] max-w-lg mx-auto lg:mx-0">
               <Image
                 src="/images/about-jessica.jpg"
-                alt="Jéssica - Designer de Sobrancelhas"
+                alt="Jéssica - Lash Designer"
                 fill
                 className="object-cover"
               />
@@ -66,7 +66,7 @@ export function About() {
 
             <div className="space-y-6 font-sans text-base lg:text-lg text-muted-foreground font-light leading-relaxed">
               <p>
-                Descobri no design de sobrancelhas uma verdadeira paixão: a possibilidade de transformar 
+                Descobri na extensão de cílios uma verdadeira paixão: a possibilidade de transformar 
                 o olhar das pessoas e revelar uma beleza que, muitas vezes, elas nem sabiam que tinham.
               </p>
               <p>
@@ -74,8 +74,8 @@ export function About() {
                 carinho e vontade de entregar o melhor resultado para cada cliente que confia no meu trabalho.
               </p>
               <p>
-                Acredito que cada rosto conta uma história única, e meu papel é realçar essa história 
-                através de sobrancelhas que valorizem o seu olhar e harmonizem com os seus traços.
+                Acredito que cada olhar conta uma história única, e meu papel é realçar essa história 
+                através de cílios que valorizem sua expressão e harmonizem com os seus traços.
               </p>
             </div>
 

@@ -16,10 +16,10 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: 'Jéssica | Design de Sobrancelhas',
-  description: 'Design de sobrancelhas com delicadeza, cuidado e atenção a cada detalhe. Realce sua beleza natural com atendimento personalizado.',
+  title: 'Jéssica | Lash Designer',
+  description: 'Extensão de cílios com delicadeza, cuidado e atenção a cada detalhe. Realce seu olhar com atendimento personalizado.',
   generator: 'v0.app',
-  keywords: ['design de sobrancelhas', 'sobrancelhas', 'beleza', 'estética', 'henna', 'brow lamination'],
+  keywords: ['extensão de cílios', 'lash designer', 'cílios', 'beleza', 'estética', 'volume brasileiro', 'lash lifting'],
   icons: {
     icon: [
       {

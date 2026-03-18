@@ -65,7 +65,7 @@ export function Footer() {
 
           {/* Copyright */}
           <p className="font-sans text-xs text-muted-foreground tracking-wider">
-            © {new Date().getFullYear()} Jéssica Design de Sobrancelhas
+            © {new Date().getFullYear()} Jéssica Lash Designer
           </p>
         </div>
       </div>

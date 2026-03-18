@@ -10,24 +10,24 @@ import {
 
 const faqs = [
   {
-    question: "Como funciona o agendamento?",
-    answer: "O agendamento é simples e prático! Você pode entrar em contato pelo WhatsApp. Assim que receber sua mensagem, responderei em até 24 horas para confirmar o melhor horário para você.",
+    question: "Quanto tempo dura a extensão de cílios?",
+    answer: "A extensão de cílios dura em média de 3 a 4 semanas. Recomendo a manutenção a cada 2-3 semanas para manter o olhar sempre impecável.",
   },
   {
-    question: "Preciso marcar horário?",
-    answer: "Sim, trabalho somente com horário marcado para garantir que você tenha toda a atenção e cuidado que merece durante o atendimento.",
+    question: "A extensão danifica os cílios naturais?",
+    answer: "Não! Quando aplicada corretamente com produtos de qualidade, a extensão não danifica seus cílios naturais. Uso técnicas que respeitam o ciclo de crescimento de cada fio.",
   },
   {
-    question: "Quanto tempo dura cada procedimento?",
-    answer: "O tempo varia de acordo com o serviço. O Design de Sobrancelhas leva em média 30 a 40 minutos. Com Henna, pode levar até 1 hora. O Brow Lamination dura aproximadamente 1 hora.",
+    question: "Quanto tempo dura a aplicação?",
+    answer: "A primeira aplicação (volume completo) leva de 1h30 a 2h30, dependendo do estilo escolhido. Manutenções levam cerca de 1h a 1h30.",
   },
   {
-    question: "Posso cancelar ou reagendar?",
-    answer: "Claro! Peço apenas que me avise com pelo menos 24 horas de antecedência para que eu possa reorganizar minha agenda.",
+    question: "Posso molhar os cílios?",
+    answer: "Sim! Após 24 horas da aplicação, você pode molhar normalmente. Evite apenas jatos de água muito fortes diretamente nos cílios e produtos oleosos.",
   },
   {
-    question: "Os produtos utilizados são de qualidade?",
-    answer: "Sim! Trabalho apenas com produtos profissionais e de alta qualidade, testados dermatologicamente. Sua segurança e satisfação são prioridades.",
+    question: "Qual a diferença entre Clássica e Volume?",
+    answer: "Na técnica Clássica, aplico um fio de extensão em cada cílio natural, ideal para quem busca um resultado mais discreto. No Volume, crio leques de fios ultrafinos para um efeito mais dramático e preenchido.",
   },
 ]
 
@@ -72,7 +72,7 @@ export function FAQ() {
               Perguntas frequentes
             </h2>
             <p className="font-sans text-lg text-muted-foreground font-light">
-              Tire suas dúvidas sobre os serviços e agendamentos. Se não encontrar o que procura, é só me chamar pelo WhatsApp!
+              Tire suas dúvidas sobre extensão de cílios e agendamentos. Se não encontrar o que procura, é só me chamar pelo WhatsApp!
             </p>
           </div>
 

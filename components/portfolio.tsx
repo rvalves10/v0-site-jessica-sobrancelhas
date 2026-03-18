@@ -8,22 +8,22 @@ const portfolioItems = [
   {
     id: 1,
     image: "/images/portfolio-1.jpg",
-    title: "Design Natural",
+    title: "Extensão Clássica",
   },
   {
     id: 2,
     image: "/images/portfolio-2.jpg",
-    title: "Brow Lamination",
+    title: "Volume Brasileiro",
   },
   {
     id: 3,
     image: "/images/portfolio-3.jpg",
-    title: "Design com Henna",
+    title: "Lash Lifting",
   },
   {
     id: 4,
     image: "/images/portfolio-4.jpg",
-    title: "Alinhamento Perfeito",
+    title: "Volume Híbrido",
   },
 ]
 
@@ -68,7 +68,7 @@ export function Portfolio() {
             Resultados reais
           </h2>
           <p className="font-sans text-lg text-muted-foreground font-light">
-            Cada detalhe importa. Veja alguns dos meus trabalhos.
+            Cada fio importa. Veja alguns dos meus trabalhos.
           </p>
         </div>
 
@@ -119,7 +119,7 @@ export function Portfolio() {
           >
             <Instagram className="w-5 h-5" />
             <span>Siga no Instagram para ver mais</span>
-            <span className="text-primary">@jessica.browdesign</span>
+            <span className="text-primary">@jessica.lashes</span>
           </a>
         </div>
       </div>

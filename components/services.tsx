@@ -7,23 +7,23 @@ import { useEffect, useRef, useState } from "react"
 const services = [
   {
     number: "01",
-    name: "Design de Sobrancelhas",
-    description: "Técnica clássica para definir e harmonizar suas sobrancelhas com o formato do seu rosto. Resultado natural e duradouro.",
+    name: "Extensão Clássica",
+    description: "Um fio de extensão aplicado em cada cílio natural. Resultado elegante e natural, perfeito para o dia a dia.",
   },
   {
     number: "02",
-    name: "Design com Henna",
-    description: "Além do design, aplicação de henna para preencher falhas e intensificar a cor dos fios. Efeito preenchido por até 15 dias.",
+    name: "Volume Brasileiro",
+    description: "Técnica que cria leques de fios ultrafinos para um olhar mais volumoso e marcante. Efeito glamouroso e sofisticado.",
   },
   {
     number: "03",
-    name: "Brow Lamination",
-    description: "Técnica que alinha e fixa os fios, criando um efeito de sobrancelhas mais volumosas e definidas por semanas.",
+    name: "Volume Híbrido",
+    description: "Combinação de fios clássicos e volume, criando textura e definição. O melhor dos dois mundos para um olhar único.",
   },
   {
     number: "04",
-    name: "Limpeza e Alinhamento",
-    description: "Remoção dos pelos em excesso e alinhamento suave para manter suas sobrancelhas sempre bonitas.",
+    name: "Lash Lifting",
+    description: "Curvatura e tintura dos cílios naturais, realçando o olhar sem extensões. Duração de até 8 semanas.",
   },
 ]
 
@@ -67,7 +67,7 @@ export function Services() {
             O que eu ofereço
           </h2>
           <p className="font-sans text-lg text-muted-foreground font-light">
-            Serviços pensados para realçar a beleza natural do seu olhar, com técnicas modernas e produtos de qualidade.
+            Técnicas especializadas para transformar o seu olhar, com produtos premium e aplicação delicada.
           </p>
         </div>
 

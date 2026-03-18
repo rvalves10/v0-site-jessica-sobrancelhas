@@ -17,8 +17,8 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-brow.jpg"
-          alt="Design de sobrancelhas profissional"
+          src="/images/hero-lash.jpg"
+          alt="Extensão de cílios profissional"
           fill
           className="object-cover"
           priority
@@ -34,7 +34,7 @@ export function Hero() {
           }`}
         >
           <p className="font-sans text-xs md:text-sm tracking-[0.3em] uppercase text-background/80 mb-6">
-            Design de Sobrancelhas
+            Lash Designer
           </p>
         </div>
 
@@ -51,7 +51,7 @@ export function Hero() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          Realço a beleza natural do seu olhar com delicadeza, cuidado e atenção a cada detalhe.
+          Transformo o seu olhar com cílios que realçam sua beleza natural, fio a fio.
         </p>
 
         <div 
