@@ -11,21 +11,22 @@ const portfolioItems = [
     image: "/images/portfolio-1.jpg",
     title: "Extensão Clássica",
   },
-  {
-    id: 2,
-    image: "/images/portfolio-2.jpg",
-    title: "Volume Brasileiro",
-  },
-  {
-    id: 3,
-    image: "/images/portfolio-3.jpg",
-    title: "Lash Lifting",
-  },
-  {
-    id: 4,
-    image: "/images/portfolio-4.jpg",
-    title: "Volume Híbrido",
-  },
+  // Caso queira adicionar novos trabalhos futuramente, descomente um destes blocos:
+  // {
+  //   id: 2,
+  //   image: "/images/portfolio-2.jpg",
+  //   title: "Volume Brasileiro",
+  // },
+  //
+    //: id: 3,
+    //image: "/images/portfolio-3.jpg",
+    //title: "Lash Lifting",
+  //
+ //
+ //id: 4,
+ // image: "/images/portfolio-4.jpg",
+ // title: "Volume Híbrido",
+ //,
 ]
 
 export function Portfolio() {
@@ -75,13 +76,13 @@ export function Portfolio() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+        <div className={`grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 ${portfolioItems.length === 1 ? "justify-items-center" : ""}`}>
           {portfolioItems.map((item, index) => (
             <div
               key={item.id}
               className={`group relative aspect-[3/4] overflow-hidden cursor-pointer transition-all duration-700 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
+              } ${portfolioItems.length === 1 ? "w-full max-w-sm" : ""}`}
               style={{ transitionDelay: `${index * 100}ms` }}
               onMouseEnter={() => setHoveredId(item.id)}
               onMouseLeave={() => setHoveredId(null)}
@@ -126,13 +127,13 @@ export function Portfolio() {
             className="font-sans text-xs tracking-[0.2em] uppercase px-10 py-6 rounded-none border-foreground/20 hover:bg-foreground hover:text-background"
           >
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/jessica.nayara.__/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3"
             >
               <Instagram className="w-4 h-4" />
-              <span>@jessica.lashes</span>
+              <span>@jessica.nayara</span>
             </a>
           </Button>
         </div>

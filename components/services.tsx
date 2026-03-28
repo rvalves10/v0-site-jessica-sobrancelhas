@@ -7,29 +7,31 @@ import { useEffect, useRef, useState } from "react"
 const services = [
   {
     number: "01",
-    name: "Clássica Fio a Fio",
-    description: "Um fio em cada cílio natural. Fica lindo e natural, perfeito pro dia a dia. Você vai amar!",
+    name: "Extensão de Cílios.",
+    description: "Seu olhar mais marcante, todos os dias!",
     highlight: "Natural",
   },
-  {
-    number: "02",
-    name: "Volume Brasileiro",
-    description: "Leques de fios finininhos pra deixar o olhar bem volumoso e marcante. Sucesso garantido!",
-    highlight: "Volumoso",
-  },
-  {
-    number: "03",
-    name: "Volume Híbrido",
-    description: "Mix de clássica com volume pra quem quer o melhor dos dois mundos. Fica maravilhoso!",
-    highlight: "Versátil",
-  },
-  {
-    number: "04",
-    name: "Lash Lifting",
-    description: "Curvatura e tintura dos seus próprios cílios. Praticidade pra quem não quer extensão. Dura até 8 semanas!",
-    highlight: "Prático",
-  },
+  // Caso queira adicionar novos serviços futuramente, descomente um destes blocos:
+  // {
+  //   number: "02",
+  //   name: "Volume Brasileiro",
+  //   description: "Leques de fios finininhos pra deixar o olhar bem volumoso e marcante. Sucesso garantido!",
+  //   highlight: "Volumoso",
+  // },
+  // {
+  //   number: "03",
+  //   name: "Volume Híbrido",
+  //   description: "Mix de clássica com volume pra quem quer o melhor dos dois mundos. Fica maravilhoso!",
+  //   highlight: "Versátil",
+  // },
+  // {
+  //   number: "04",
+  //   name: "Lash Lifting",
+  //   description: "Curvatura e tintura dos seus próprios cílios. Praticidade pra quem não quer extensão. Dura até 8 semanas!",
+  //   highlight: "Prático",
+  // },
 ]
+
 
 export function Services() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -133,7 +135,7 @@ export function Services() {
                     }`}
                   >
                     <a
-                      href={`https://wa.me/5500000000000?text=Oi, Jéssica! Quero saber mais sobre ${service.name}!`}
+                      href={`https://wa.me/5515991279172?text=Oi, Vim pelo site e gostaria de agendar um horário. ${service.name}!`}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Agendar ${service.name}`}

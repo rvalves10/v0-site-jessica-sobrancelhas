@@ -100,7 +100,7 @@ export function LaunchPromo() {
             }`}
           >
             <a
-              href="https://wa.me/5500000000000?text=Oi, Jéssica! Vi a promoção de lançamento e quero aproveitar!"
+              href="https://wa.me/5515991279172?text=Oi, Jéssica! Vim pelo site e gostaria de agendar um horário."
               target="_blank"
               rel="noopener noreferrer"
             >

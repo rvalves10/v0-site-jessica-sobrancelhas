@@ -77,7 +77,7 @@ export function Hero() {
             className="bg-background hover:bg-background/90 text-foreground font-sans text-xs tracking-[0.2em] uppercase px-12 py-7 rounded-none"
           >
             <a
-              href="https://wa.me/5500000000000?text=Oi, Jéssica! Quero agendar um horário!"
+              href="https://wa.me/5515991279172?text=Oi, Jéssica! Vim pelo site e gostaria de agendar um horário."
               target="_blank"
               rel="noopener noreferrer"
             >

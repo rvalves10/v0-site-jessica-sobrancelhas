@@ -102,7 +102,7 @@ export function Header() {
               className="mt-4 bg-foreground hover:bg-foreground/90 text-background font-sans text-xs tracking-widest uppercase px-10"
             >
               <a
-                href="https://wa.me/5500000000000?text=Olá! Gostaria de agendar um horário."
+                href="https://wa.me/5515991279172?text=Olá! Jessica, vim pelo site e gostaria de agendar um horário."
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}

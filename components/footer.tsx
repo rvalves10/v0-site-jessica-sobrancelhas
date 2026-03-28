@@ -48,7 +48,7 @@ export function Footer() {
           {/* Social Links */}
           <div className="flex items-center justify-center gap-4 mb-12">
             <a
-              href="https://wa.me/5500000000000"
+              href="https://wa.me/5515991279172?text=Oi, Jéssica! Vim pelo site e gostaria de agendar um horário."
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 rounded-full border border-border hover:border-primary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-all duration-300"
@@ -57,7 +57,7 @@ export function Footer() {
               <MessageCircle className="w-5 h-5" />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/jessica.nayara.__/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 rounded-full border border-border hover:border-primary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-all duration-300"

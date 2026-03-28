@@ -16,7 +16,8 @@ export default function Home() {
       <About />
       <Services />
       <LaunchPromo />
-      <Portfolio />
+      {/* Portfolio desativado temporariamente enquanto não há clientes disponíveis */}
+      {/* <Portfolio /> */}
       <FAQ />
       <Footer />
       <WhatsAppButton />
